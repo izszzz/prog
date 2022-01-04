@@ -6,9 +6,9 @@ public class StartLogoFunctions : MonoBehaviour
 {    
     Animator animator;
     void Start(){
-        this.animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
     public void CloseStartScene(){
-        this.animator.SetTrigger("Close");
+        animator.SetTrigger("Close");
     }
 }

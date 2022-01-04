@@ -14,11 +14,9 @@ public class MenuManager : MonoBehaviour
     }
 
     void AddCards(){
-        var pos = cardsContainer.transform.position;
-        var index = 0;
+        var (pos, index) = (cardsContainer.transform.position, 0);
         foreach(var sprite in sprites){
-            var go = Instantiate(cardPrefab, new Vector3(pos.x+index*4, pos.y, pos.z), Quaternion.identity, cardsContainer.transform);
-            var card = go.GetComponent<Card>();
+            var card = Instantiate(cardPrefab, new Vector3(pos.x+index*4, pos.y, pos.z), Quaternion.identity, cardsContainer.transform).GetComponent<Card>();
             card.sprite = sprite;
             card.id = index++;
             card.onClick = OpenPanel();
@@ -32,6 +30,5 @@ public class MenuManager : MonoBehaviour
         };
     }
 
-    public virtual void SetPanel(ScreenManager go, int id){
-    }
+    public virtual void SetPanel(ScreenManager go, int id){}
 }
