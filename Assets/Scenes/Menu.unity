@@ -155,7 +155,7 @@ RectTransform:
   - {fileID: 1308666128}
   - {fileID: 1155211561}
   m_Father: {fileID: 225574595}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -256,8 +256,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
-  - {fileID: 1250495122}
   - {fileID: 44092541}
+  - {fileID: 1250495122}
   m_Father: {fileID: 1077881290}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1059,23 +1059,23 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 789135826}
-          m_MethodName: PointerEnter
-          m_Mode: 1
+          m_MethodName: PointerHover
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 789135826}
-          m_MethodName: PointerExit
-          m_Mode: 1
+          m_MethodName: PointerHover
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1084,12 +1084,12 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 3
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 789135826}
-          m_MethodName: PointerUp
+          m_MethodName: PointerClick
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 789135820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3728e1b15b0913409b8f95a4ab23a13, type: 3}
+  m_Script: {fileID: 11500000, guid: bab26ba844110464b87f1ea8b1c47ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &789135827
@@ -1865,7 +1865,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 225574595}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2090,7 +2090,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1308666127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3728e1b15b0913409b8f95a4ab23a13, type: 3}
+  m_Script: {fileID: 11500000, guid: bab26ba844110464b87f1ea8b1c47ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1308666130
@@ -2111,23 +2111,23 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1308666129}
-          m_MethodName: PointerEnter
-          m_Mode: 1
+          m_MethodName: PointerHover
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1308666129}
-          m_MethodName: PointerExit
-          m_Mode: 1
+          m_MethodName: PointerHover
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

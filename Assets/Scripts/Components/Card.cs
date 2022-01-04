@@ -18,7 +18,7 @@ public class Card : MonoBehaviour
     }
 
     void AddEventTrigger(){
-        var (trigger,entry) = (this.GetComponent<EventTrigger>(), new EventTrigger.Entry());
+        var (trigger,entry) = (GetComponent<EventTrigger>(), new EventTrigger.Entry());
         entry.eventID = EventTriggerType.PointerClick;
         entry.callback.AddListener((e) => onClick(id));
         trigger.triggers.Add(entry); 
