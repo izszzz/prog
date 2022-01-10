@@ -7,7 +7,7 @@ public class Lt : MonoBehaviour
     void Start(){
         animator = GetComponent<Animator>();
     }
-    public void PointerHover(bool boolean){ animator.SetBool("Hover", boolean); }
+    public void PointerHover(bool boolean) => animator.SetBool("Hover", boolean);
 
-    public void PointerClick(){ SceneManager.LoadScene("Scenes/Start", LoadSceneMode.Single); }
+    public void PointerClick() => SceneManager.LoadScene("Scenes/Start", LoadSceneMode.Single);
 }

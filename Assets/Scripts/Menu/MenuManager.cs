@@ -8,8 +8,12 @@ public class MenuManager : MonoBehaviour
     public GameObject cardPrefab;
     public GameObject newScreen;
     public Sprite[] sprites;
+    ScreenManager screenManagerScript;
+    Animator newScreenAnimator;
     void Start()
     {
+        screenManagerScript = screenManager.GetComponent<ScreenManager>();
+        newScreenAnimator = newScreen.GetComponent<Animator>();
         AddCards();
     }
 
@@ -24,8 +28,8 @@ public class MenuManager : MonoBehaviour
     }
     public Action<int> OpenPanel(){
         return (int id) => {
-            var go = screenManager.GetComponent<ScreenManager>();
-            go.OpenPanel(newScreen.GetComponent<Animator>()); 
+            var go = screenManagerScript;
+            screenManagerScript.OpenPanel(newScreenAnimator); 
             SetPanel(go, id);
         };
     }
