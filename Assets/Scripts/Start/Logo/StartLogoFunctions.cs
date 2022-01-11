@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class StartLogoFunctions : MonoBehaviour
 {    
@@ -8,8 +6,7 @@ public class StartLogoFunctions : MonoBehaviour
     AudioSource audioSource;
     public AudioClip selectUi;
     void Start(){
-        animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        (animator, audioSource) = (GetComponent<Animator>(), GetComponent<AudioSource>());
     }
     public void CloseStartScene(){
         animator.SetTrigger("Close");
