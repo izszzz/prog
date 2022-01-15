@@ -134,7 +134,7 @@ MonoBehaviour:
   sprite: {fileID: 0}
   content: {fileID: 8283608303971020950}
   clickSound: {fileID: 8300000, guid: 7f3270c9e74da2146a132b89dd2a9279, type: 3}
-  pointerEnterSound: {fileID: 8300000, guid: b5aac9b24005ad1478d6619d6e0c71c6, type: 3}
+  pointerEnterSound: {fileID: 8300000, guid: 7f811216da256f9499a2ab75fc96531b, type: 3}
 --- !u!114 &2063799315451361622
 MonoBehaviour:
   m_ObjectHideFlags: 0

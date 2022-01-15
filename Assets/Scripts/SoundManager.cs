@@ -8,7 +8,5 @@ public class SoundManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void PlaySE(AudioClip audioClip){
-        audioSource.PlayOneShot(audioClip);
-    }
+    public void PlaySE(AudioClip audioClip)=>audioSource.PlayOneShot(audioClip);
 }

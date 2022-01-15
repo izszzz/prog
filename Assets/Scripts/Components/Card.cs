@@ -7,8 +7,8 @@ public class Card : MonoBehaviour
     public int id;
     public Sprite sprite;
     public GameObject content;
-    public Action<int, AudioClip> OnPointerClick;
-    public Action<int, AudioClip> OnPointerEnter;
+    public Action<AudioClip, int> OnPointerClick;
+    public Action<AudioClip> OnPointerEnter;
     public AudioClip clickSound;
     public AudioClip pointerEnterSound;
     AudioSource audioSource;
@@ -17,10 +17,6 @@ public class Card : MonoBehaviour
         content.GetComponent<Image>().sprite = sprite;
     }
 
-    public void PointerClick(){
-        OnPointerClick(id, clickSound);
-    }
-    public void PointerEnter(){
-        OnPointerEnter(id, pointerEnterSound);
-    }
+    public void PointerClick()=>OnPointerClick(clickSound, id);
+    public void PointerEnter()=>OnPointerEnter(pointerEnterSound);
 }

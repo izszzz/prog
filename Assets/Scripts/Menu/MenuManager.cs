@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
     public GameObject soundManager;
     public GameObject cardsContainer;
     public GameObject cardPrefab;
+    public GameObject framePrefab;
     public GameObject newScreen;
     public Sprite[] sprites;
     ScreenManager screenManagerScript;
@@ -18,8 +19,16 @@ public class MenuManager : MonoBehaviour
         soundManagerScript = soundManager.GetComponent<SoundManager>();
         newScreenAnimator = newScreen.GetComponent<Animator>();
         AddCards();
+        SetFrame();
     }
-
+    void SetFrame(){
+        var frame = framePrefab.GetComponent<Frame>();
+        var (lt, rt)= (frame.Lt.GetComponent<Lt>(), frame.Rt.GetComponent<Rt>());
+        lt.OnPointerEnter = PlaySE();
+        lt.OnPointerClick = PlaySE();
+        rt.OnPointerEnter = PlaySE();
+        rt.OnPointerClick = PlaySE();
+    }
     void AddCards(){
         var (pos, index) = (cardsContainer.transform.position, 0);
         foreach(var sprite in sprites){
@@ -27,19 +36,16 @@ public class MenuManager : MonoBehaviour
             card.sprite = sprite;
             card.id = index++;
             card.OnPointerClick = CardPointerClick();
-            card.OnPointerEnter = CardPointerEnter();
+            card.OnPointerEnter = PlaySE();
         }
     }
-    public Action<int, AudioClip> CardPointerClick(){
-        return (int id, AudioClip audioSource) => {
+    public Action<AudioClip, int> CardPointerClick() =>
+        (AudioClip audioSource, int id) => {
             screenManagerScript.OpenPanel(newScreenAnimator); 
+            PlaySE()(audioSource);
             SetPanel(screenManagerScript, id);
-            soundManagerScript.PlaySE(audioSource);
         };
-    }
-    public Action<int, AudioClip> CardPointerEnter(){
-        return (int id, AudioClip audioSource) => soundManagerScript.PlaySE(audioSource);
-    }
-
+    
+    public Action<AudioClip> PlaySE()=> (AudioClip audioClip) => soundManagerScript.PlaySE(audioClip);
     public virtual void SetPanel(ScreenManager go, int id){}
 }
