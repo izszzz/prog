@@ -17,9 +17,9 @@ public class MenuManager : MonoBehaviour
     {
         screenManagerScript = screenManager.GetComponent<ScreenManager>();
         soundManagerScript = soundManager.GetComponent<SoundManager>();
-        newScreenAnimator = newScreen.GetComponent<Animator>();
         AddCards();
         SetFrame();
+        newScreenAnimator = newScreen.GetComponent<Animator>();
     }
     void SetFrame(){
         var frame = framePrefab.GetComponent<Frame>();

@@ -630,6 +630,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 225574595}
     m_Modifications:
+    - target: {fileID: 962880699443910338, guid: 9fbb012e21f82c44b903253fcd34e362,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1595494441}
+    - target: {fileID: 962880699443910338, guid: 9fbb012e21f82c44b903253fcd34e362,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 96531114}
+    - target: {fileID: 962880699911945715, guid: 9fbb012e21f82c44b903253fcd34e362,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1595494441}
+    - target: {fileID: 962880699911945715, guid: 9fbb012e21f82c44b903253fcd34e362,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1327287892}
     - target: {fileID: 962880700185142108, guid: 9fbb012e21f82c44b903253fcd34e362,
         type: 3}
       propertyPath: m_Name
@@ -772,6 +792,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &812294158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 962880700185142108, guid: 9fbb012e21f82c44b903253fcd34e362,
+    type: 3}
+  m_PrefabInstance: {fileID: 690666579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &823337634
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +920,7 @@ MonoBehaviour:
   cardsContainer: {fileID: 1250495121}
   cardPrefab: {fileID: 8283608303642569937, guid: 95f4988a1341ade46a37aaaad297b801,
     type: 3}
-  framePrefab: {fileID: 0}
+  framePrefab: {fileID: 812294158}
   newScreen: {fileID: 0}
   sprites:
   - {fileID: 0}
