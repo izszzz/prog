@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class MenuManager : MonoBehaviour
+public class HomeManager : MonoBehaviour
 {
     public GameObject screenManager;
     public GameObject soundManager;
@@ -17,15 +17,19 @@ public class MenuManager : MonoBehaviour
     {
         screenManagerScript = screenManager.GetComponent<ScreenManager>();
         soundManagerScript = soundManager.GetComponent<SoundManager>();
-        AddCards();
-        SetFrame();
-        newScreenAnimator = newScreen.GetComponent<Animator>();
+        // if分消す↓
+        if(newScreen) newScreenAnimator = newScreen.GetComponent<Animator>();
+        if(cardPrefab) AddCards();
+        if(framePrefab) SetFrame();
     }
     void SetFrame(){
         var frame = framePrefab.GetComponent<Frame>();
-        var (lt, rt)= (frame.Lt.GetComponent<Lt>(), frame.Rt.GetComponent<Rt>());
-        lt.OnPointerEnter = PlaySE();
-        lt.OnPointerClick = PlaySE();
+        if(frame.Lt){
+            var lt = frame.Lt.GetComponent<Lt>();
+            lt.OnPointerEnter = PlaySE();
+            lt.OnPointerClick = PlaySE();
+        }
+        var rt = frame.Rt.GetComponent<Rt>();
         rt.OnPointerEnter = PlaySE();
         rt.OnPointerClick = PlaySE();
     }
